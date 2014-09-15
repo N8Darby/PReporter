@@ -1,0 +1,10 @@
+\\intsrv1\users\ndarby\My Documents\Visual Studio 2012\Projects\PlexusDataHelper\PlexusDataHelper\bin\PlexusDataHelper.dll
+\\intsrv1\users\ndarby\My Documents\Visual Studio 2012\Projects\PlexusDataHelper\PlexusDataHelper\bin\PlexusDataHelper.pdb
+\\intsrv1\users\ndarby\My Documents\Visual Studio 2012\Projects\PlexusDataHelper\PlexusDataHelper\obj\Debug\PlexusDataHelper.dll
+\\intsrv1\users\ndarby\My Documents\Visual Studio 2012\Projects\PlexusDataHelper\PlexusDataHelper\obj\Debug\PlexusDataHelper.pdb
+\\intsrv1\users\ndarby\My Documents\Visual Studio 2012\Projects\PlexusDataHelper\PlexusDataHelper\obj\Debug\PlexusDataHelper.csprojResolveAssemblyReference.cache
+\\intsrv1\users\ndarby\My Documents\Personal\P4E\PReporter\PlexusDataHelper\bin\PlexusDataHelper.dll
+\\intsrv1\users\ndarby\My Documents\Personal\P4E\PReporter\PlexusDataHelper\bin\PlexusDataHelper.pdb
+\\intsrv1\users\ndarby\My Documents\Personal\P4E\PReporter\PlexusDataHelper\obj\Debug\PlexusDataHelper.csprojResolveAssemblyReference.cache
+\\intsrv1\users\ndarby\My Documents\Personal\P4E\PReporter\PlexusDataHelper\obj\Debug\PlexusDataHelper.dll
+\\intsrv1\users\ndarby\My Documents\Personal\P4E\PReporter\PlexusDataHelper\obj\Debug\PlexusDataHelper.pdb

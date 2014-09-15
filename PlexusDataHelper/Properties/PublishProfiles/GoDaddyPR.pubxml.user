@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>ftp://50.62.160.131/httpdocs</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="another_page.html">
+      <publishTime>08/11/2014 15:45:39</publishTime>
+    </File>
+    <File Include="bin/FileHelpers.dll">
+      <publishTime>06/13/2014 10:39:45</publishTime>
+    </File>
+    <File Include="bin/PlexusDataHelper.dll">
+      <publishTime>09/11/2014 12:18:29</publishTime>
+    </File>
+    <File Include="bin/PlexusDataHelper.pdb">
+      <publishTime>09/11/2014 12:18:29</publishTime>
+    </File>
+    <File Include="contact.html">
+      <publishTime>08/21/2014 09:30:46</publishTime>
+    </File>
+    <File Include="css/basic.css">
+      <publishTime>08/29/2014 16:56:41</publishTime>
+    </File>
+    <File Include="css/basic_ie.css">
+      <publishTime>08/18/2014 17:25:36</publishTime>
+    </File>
+    <File Include="css/grd_alt.png">
+      <publishTime>08/11/2014 09:18:04</publishTime>
+    </File>
+    <File Include="css/grd_head.png">
+      <publishTime>08/11/2014 09:18:04</publishTime>
+    </File>
+    <File Include="css/grd_pgr.png">
+      <publishTime>08/11/2014 09:18:04</publishTime>
+    </File>
+    <File Include="css/PStyleSheet.css">
+      <publishTime>09/05/2014 18:02:27</publishTime>
+    </File>
+    <File Include="css/x.png">
+      <publishTime>08/18/2014 17:25:24</publishTime>
+    </File>
+    <File Include="examples.html">
+      <publishTime>08/11/2014 15:45:40</publishTime>
+    </File>
+    <File Include="images/downarrow.gif">
+      <publishTime>08/05/2014 16:12:17</publishTime>
+    </File>
+    <File Include="images/uparrow.gif">
+      <publishTime>08/05/2014 16:12:17</publishTime>
+    </File>
+    <File Include="index.aspx">
+      <publishTime>09/11/2014 12:19:55</publishTime>
+    </File>
+    <File Include="js/basic.js">
+      <publishTime>08/19/2014 08:05:48</publishTime>
+    </File>
+    <File Include="js/jquery.js">
+      <publishTime>08/18/2014 17:24:47</publishTime>
+    </File>
+    <File Include="js/jquery.simplemodal.js">
+      <publishTime>08/18/2014 17:24:47</publishTime>
+    </File>
+    <File Include="page.html">
+      <publishTime>08/11/2014 15:45:40</publishTime>
+    </File>
+    <File Include="PlexRP.pfx">
+      <publishTime>08/08/2014 09:42:28</publishTime>
+    </File>
+    <File Include="style/back.png">
+      <publishTime>08/11/2014 19:38:06</publishTime>
+    </File>
+    <File Include="style/bullet.png">
+      <publishTime>08/11/2014 15:46:41</publishTime>
+    </File>
+    <File Include="style/downarrow.gif">
+      <publishTime>08/11/2014 23:17:42</publishTime>
+    </File>
+    <File Include="style/fb.gif">
+      <publishTime>08/20/2014 10:27:09</publishTime>
+    </File>
+    <File Include="style/footer.png">
+      <publishTime>08/11/2014 19:34:03</publishTime>
+    </File>
+    <File Include="style/graphic.png">
+      <publishTime>08/11/2014 15:46:41</publishTime>
+    </File>
+    <File Include="style/grd_alt.png">
+      <publishTime>08/11/2014 09:18:04</publishTime>
+    </File>
+    <File Include="style/grd_head.png">
+      <publishTime>08/11/2014 09:18:04</publishTime>
+    </File>
+    <File Include="style/grd_pgr.png">
+      <publishTime>08/11/2014 09:18:04</publishTime>
+    </File>
+    <File Include="style/link.png">
+      <publishTime>08/11/2014 15:46:41</publishTime>
+    </File>
+    <File Include="style/search.png">
+      <publishTime>08/11/2014 15:46:41</publishTime>
+    </File>
+    <File Include="style/side_back.png">
+      <publishTime>08/11/2014 15:46:41</publishTime>
+    </File>
+    <File Include="style/side_base.png">
+      <publishTime>08/11/2014 15:46:41</publishTime>
+    </File>
+    <File Include="style/side_top.png">
+      <publishTime>08/11/2014 15:46:41</publishTime>
+    </File>
+    <File Include="style/style.css">
+      <publishTime>09/10/2014 18:04:08</publishTime>
+    </File>
+    <File Include="style/tab.png">
+      <publishTime>08/11/2014 15:46:42</publishTime>
+    </File>
+    <File Include="style/tab_selected.png">
+      <publishTime>08/11/2014 18:03:54</publishTime>
+    </File>
+    <File Include="style/uparrow.gif">
+      <publishTime>08/11/2014 23:17:56</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/05/2014 18:06:08</publishTime>
+    </File>
+    <File Include="WebForm1.aspx">
+      <publishTime>08/11/2014 15:45:54</publishTime>
+    </File>
+    <File Include="WebForm1.aspx.cs">
+      <publishTime>08/06/2014 18:24:02</publishTime>
+    </File>
+    <File Include="WebForm2_downline.aspx">
+      <publishTime>09/05/2014 13:45:26</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

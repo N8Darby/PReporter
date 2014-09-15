@@ -1,0 +1,5 @@
+\\intsrv1\users\ndarby\my documents\visual studio 2012\Projects\PlexusDataHelper\PlexusDataHelper\bin\PlexusDataHelper.dll
+\\intsrv1\users\ndarby\my documents\visual studio 2012\Projects\PlexusDataHelper\PlexusDataHelper\bin\PlexusDataHelper.pdb
+\\intsrv1\users\ndarby\my documents\visual studio 2012\Projects\PlexusDataHelper\PlexusDataHelper\obj\Release\PlexusDataHelper.dll
+\\intsrv1\users\ndarby\my documents\visual studio 2012\Projects\PlexusDataHelper\PlexusDataHelper\obj\Release\PlexusDataHelper.pdb
+\\intsrv1\users\ndarby\my documents\visual studio 2012\Projects\PlexusDataHelper\PlexusDataHelper\obj\Release\PlexusDataHelper.csprojResolveAssemblyReference.cache
