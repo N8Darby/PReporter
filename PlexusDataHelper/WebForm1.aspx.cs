@@ -449,16 +449,18 @@ namespace PlexusDataHelper
             monthPicker.SelectedValue = Session["ReportMonth"].ToString();
             yearPicker.SelectedValue = Session["ReportYear"].ToString();
 
-            if (GridViewSortDirection == SortDirection.Ascending)
+            if (Session["SortExpression"] != null)
             {
-                SortGridView(Session["SortExpression"].ToString(), ASCENDING, getFilterCriteria());
-            }
+                if (GridViewSortDirection == SortDirection.Ascending)
+                {
+                    SortGridView(Session["SortExpression"].ToString(), ASCENDING, getFilterCriteria());
+                }
 
-            else
-            {
-                SortGridView(Session["SortExpression"].ToString(), DESCENDING, getFilterCriteria());
+                else
+                {
+                    SortGridView(Session["SortExpression"].ToString(), DESCENDING, getFilterCriteria());
+                }
             }
-
             Response.Redirect("index.aspx");
         }
 
