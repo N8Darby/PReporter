@@ -182,16 +182,16 @@
                                         <th>Levels 1-12</th>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td class="leftAlignTop">
                                             <%= Session["top25_1"] %>
                                         </td>
-                                        <td>
+                                        <td class="leftAlignTop">
                                             <%= Session["top25_1_4"] %>
                                         </td>
-                                        <td>
+                                        <td class="leftAlignTop">
                                             <%= Session["top25_1_7"] %>
                                         </td>
-                                        <td>
+                                        <td class="leftAlignTop">
                                             <%= Session["top25_1_12"] %>
                                         </td>
                                     </tr>
