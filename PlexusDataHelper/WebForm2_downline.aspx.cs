@@ -62,10 +62,10 @@ namespace PlexusDataHelper
 
                 TreeNode child = new TreeNode
                 {
-                    Text = getColorForTreeNode(dr) + dr.Name + " (" + dr.Level + ") - $" + String.Format("{0:0.00}", dr.Pv.ToString("0.00") + " - " + dr.JoinDate.ToShortDateString() + " - " + dr.TotalPoints + "</span>"),
+                    Text = getColorForTreeNode(dr) + "<B>" + dr.Name + " (" + dr.Level + ")</B>&nbsp;&nbsp;&nbsp;PV: $" + String.Format("{0:0.00}", dr.Pv.ToString("0.00")) + "&nbsp;&nbsp;&nbsp;PointsPV: $" + String.Format("{0:0.00}", dr.PointsPv.ToString("0.00")) + "&nbsp;&nbsp;&nbsp;Join: " + dr.JoinDate.ToShortDateString() + "&nbsp;&nbsp;&nbsp;Total Points: " + dr.TotalPoints + "</span>",
                     Value = dr.AmbNum.ToString()
                 };
-                
+
                 if (parentId == -1)
                 {
                     

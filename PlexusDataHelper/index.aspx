@@ -154,14 +154,16 @@
                             <asp:BoundField DataField="Level" ItemStyle-CssClass="TACenter" HeaderText="Level" SortExpression="Level"></asp:BoundField>
                             <asp:BoundField DataField="AmbNum" ItemStyle-CssClass="TACenter" HeaderText="Ambassador Number" SortExpression="AmbNum"></asp:BoundField>
                             <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name"></asp:BoundField>
+                            <asp:BoundField DataField="Points" ItemStyle-CssClass="TACenter" HeaderText="Points" SortExpression="Points"></asp:BoundField>
+                            <asp:BoundField DataField="Pv" ItemStyle-CssClass="TARight" HeaderText="Current PV" SortExpression="Pv" DataFormatString="{0:c}"></asp:BoundField>
+                            <asp:BoundField DataField="PointsPv" ItemStyle-CssClass="TARight" HeaderText="Points Pv" SortExpression="PointsPv" DataFormatString="{0:c}"></asp:BoundField>
+                            <asp:BoundField DataField="WelcomePv" ItemStyle-CssClass="TARight" HeaderText="Welcome Pv" SortExpression="WelcomePv" DataFormatString="{0:c}"></asp:BoundField>
                             <asp:BoundField DataField="PayLvl" ItemStyle-CssClass="TACenter" HeaderText="Pay Level" SortExpression="PayLvl"></asp:BoundField>
                             <asp:BoundField DataField="JoinDate" HeaderText="Join Date" SortExpression="JoinDate" DataFormatString="{0:MM/dd/yyyy}"></asp:BoundField>
-                            <asp:BoundField DataField="Points" ItemStyle-CssClass="TACenter" HeaderText="Points" SortExpression="Points"></asp:BoundField>
                             <asp:BoundField DataField="Cq" ItemStyle-CssClass="TACenter" HeaderText="CQ" SortExpression="Cq"></asp:BoundField>
                             <asp:BoundField DataField="Active" ItemStyle-CssClass="TACenter" HeaderText="Active" SortExpression="Active"></asp:BoundField>
                             <asp:BoundField DataField="Rank" HeaderText="Rank" SortExpression="Rank"></asp:BoundField>
                             <asp:BoundField DataField="Customers" ItemStyle-CssClass="TACenter" HeaderText="Customers" SortExpression="Customers"></asp:BoundField>
-                            <asp:BoundField DataField="Pv" ItemStyle-CssClass="TARight" HeaderText="PV" SortExpression="Pv" DataFormatString="{0:c}"></asp:BoundField>
                             <asp:BoundField DataField="Phone" ItemStyle-CssClass="TACenter" HeaderText="Phone" SortExpression="Phone"></asp:BoundField>
                             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email"></asp:BoundField>
                             <asp:BoundField DataField="TotalPoints" HeaderText="Total Points" SortExpression="TotalPoints"></asp:BoundField>

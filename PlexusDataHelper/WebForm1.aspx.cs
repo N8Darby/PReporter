@@ -193,17 +193,19 @@ namespace PlexusDataHelper
 									pRecord.Level = Int32.Parse(new String(myItem[0].ToCharArray().Where(c => Char.IsDigit(c)).ToArray()));
 									pRecord.AmbNum = Int32.Parse(new String(myItem[1].ToCharArray().Where(c => Char.IsDigit(c)).ToArray()));
 									pRecord.Name = cleanString(myItem[2].ToString());
-									pRecord.PayLvl = Int32.Parse(new String(myItem[5].ToCharArray().Where(c => Char.IsDigit(c)).ToArray()));
-									pRecord.JoinDate = DateTime.Parse(cleanString(myItem[6].ToString()));
+									pRecord.PayLvl = Int32.Parse(new String(myItem[7].ToCharArray().Where(c => Char.IsDigit(c)).ToArray()));
+									pRecord.JoinDate = DateTime.Parse(cleanString(myItem[8].ToString()));
 									pRecord.Points = Int32.Parse(new String(myItem[3].ToCharArray().Where(c => Char.IsDigit(c)).ToArray()));
-									pRecord.Cq = cleanString(myItem[7].ToString());;
-									pRecord.Active = cleanString(myItem[8].ToString());
-									pRecord.Rank = getRankValue(cleanString(myItem[9].ToString()));
-									pRecord.Customers = Int32.Parse(new String(myItem[10].ToCharArray().Where(c => Char.IsDigit(c)).ToArray()));
+									pRecord.Cq = cleanString(myItem[9].ToString());;
+									pRecord.Active = cleanString(myItem[10].ToString());
+									pRecord.Rank = getRankValue(cleanString(myItem[11].ToString()));
+									pRecord.Customers = Int32.Parse(new String(myItem[12].ToCharArray().Where(c => Char.IsDigit(c)).ToArray()));
 									pRecord.Pv = double.Parse(cleanString(myItem[4].ToString()));
-									pRecord.Phone = PhoneNumber(cleanString(myItem[11].ToString()));
-									pRecord.Email = cleanString(myItem[12].ToString());
+									pRecord.Phone = PhoneNumber(cleanString(myItem[13].ToString()));
+									pRecord.Email = cleanString(myItem[14].ToString());
                                     pRecord.TotalPoints = 0;
+                                    pRecord.PointsPv = double.Parse(cleanString(myItem[5].ToString()));
+                                    pRecord.WelcomePv = double.Parse(cleanString(myItem[6].ToString()));
 									plexRecords.Add(pRecord);
 
 									if (pRecord.Active == "Y")
@@ -387,7 +389,9 @@ namespace PlexusDataHelper
 			DataColumn col_active = new DataColumn("Active", typeof(String));
 			DataColumn col_rank = new DataColumn("Rank", typeof(String));
 			DataColumn col_cust = new DataColumn("Customers", typeof(Int32));
-			DataColumn col_pv = new DataColumn("Pv", typeof(double));
+            DataColumn col_pv = new DataColumn("Pv", typeof(double));
+            DataColumn col_pointspv = new DataColumn("PointsPv", typeof(double));
+            DataColumn col_welcomepv = new DataColumn("WelcomePv", typeof(double));
 			DataColumn col_phone = new DataColumn("Phone", typeof(String));
             DataColumn col_email = new DataColumn("Email", typeof(String));
             DataColumn col_totPoints = new DataColumn("TotalPoints", typeof(Int32));
@@ -395,14 +399,16 @@ namespace PlexusDataHelper
 			dt.Columns.Add(col_level);
 			dt.Columns.Add(col_ambNum);
 			dt.Columns.Add(col_name);
-			dt.Columns.Add(col_payLvl);
+            dt.Columns.Add(col_point);
+            dt.Columns.Add(col_pv);
+            dt.Columns.Add(col_pointspv);
+            dt.Columns.Add(col_welcomepv);
+            dt.Columns.Add(col_payLvl);
 			dt.Columns.Add(col_joinDate);
-			dt.Columns.Add(col_point);
 			dt.Columns.Add(col_cq);
 			dt.Columns.Add(col_active);
 			dt.Columns.Add(col_rank);
 			dt.Columns.Add(col_cust);
-			dt.Columns.Add(col_pv);
             dt.Columns.Add(col_phone);
             dt.Columns.Add(col_email);
             dt.Columns.Add(col_totPoints);
@@ -427,6 +433,8 @@ namespace PlexusDataHelper
 				drow[col_phone] = rec.Phone;
                 drow[col_email] = rec.Email;
                 drow[col_totPoints] = rec.TotalPoints;
+                drow[col_pointspv] = rec.PointsPv;
+                drow[col_welcomepv] = rec.WelcomePv;
 				dt.Rows.Add(drow);
 			}
 
@@ -515,7 +523,7 @@ namespace PlexusDataHelper
         {
             foreach (DAO_PLEXUS_DATARECORD rec in plexRecords)
             {
-                if ((rec.Pv >= 100) && (rec.TotalPoints == 0))
+                if ((rec.PointsPv >= 100) && (rec.TotalPoints == 0) && (rec.Active == "Y"))
                     rec.TotalPoints = getAccuratePayPoints(rec.AmbNum);
             }
             setFilterCriteria("1=1");
@@ -562,19 +570,19 @@ namespace PlexusDataHelper
                 Session["SortExpression"] = "Pv";
                 GridViewSortDirection = SortDirection.Descending;
                 SortGridView("Pv", DESCENDING, getFilterCriteria());
-                prepTop25Popup(10, "top25_1");
+                prepTop25Popup(4, "top25_1");
 
                 setFilterCriteria("([Level] <= 4) and ([Level] <> 0) and ([Pv] > 0)");
                 SortGridView("Pv", DESCENDING, getFilterCriteria());
-                prepTop25Popup(10, "top25_1_4");
+                prepTop25Popup(4, "top25_1_4");
 
                 setFilterCriteria("([Level] <= 7) and ([Level] <> 0) and ([Pv] > 0)");
                 SortGridView("Pv", DESCENDING, getFilterCriteria());
-                prepTop25Popup(10, "top25_1_7");
+                prepTop25Popup(4, "top25_1_7");
 
                 setFilterCriteria("([Level] <= 12) and ([Level] <> 0) and ([Pv] > 0)");
                 SortGridView("Pv", DESCENDING, getFilterCriteria());
-                prepTop25Popup(10, "top25_1_12");
+                prepTop25Popup(4, "top25_1_12");
 
             }
 
@@ -584,19 +592,19 @@ namespace PlexusDataHelper
                 Session["SortExpression"] = "Pv";
                 GridViewSortDirection = SortDirection.Descending;
                 SortGridView("Pv", DESCENDING, getFilterCriteria());
-                prepTop25Popup(10, "top25_1");
+                prepTop25Popup(4, "top25_1");
 
                 setFilterCriteria("([Active] = 'Y') and ([Pv] < 100) and ([Pv] > 65) and ([Level] <= 4) and ([Level] <> 0)");
                 SortGridView("Pv", DESCENDING, getFilterCriteria());
-                prepTop25Popup(10, "top25_1_4");
+                prepTop25Popup(4, "top25_1_4");
 
                 setFilterCriteria("([Active] = 'Y') and ([Pv] < 100) and ([Pv] > 65) and ([Level] <= 7) and ([Level] <> 0)");
                 SortGridView("Pv", DESCENDING, getFilterCriteria());
-                prepTop25Popup(10, "top25_1_7");
+                prepTop25Popup(4, "top25_1_7");
 
                 setFilterCriteria("([Active] = 'Y') and ([Pv] < 100) and ([Pv] > 65) and ([Level] <= 12) and ([Level] <> 0)");
                 SortGridView("Pv", DESCENDING, getFilterCriteria());
-                prepTop25Popup(10, "top25_1_12");
+                prepTop25Popup(4, "top25_1_12");
             }
             processFBImage();
         }
@@ -611,7 +619,7 @@ namespace PlexusDataHelper
                     if (DropDownList_topReports.SelectedValue == "sc")
                     {
                         s = s + "<b>#" + (i + 1) + " " + GridView_plexRecords.Rows[i].Cells[2].Text + "</b> (" + GridView_plexRecords.Rows[i].Cells[0].Text + ") - " + GridView_plexRecords.Rows[i].Cells[colToDisplay].Text + " - "
-                            + GridView_plexRecords.Rows[i].Cells[11].Text + " <BR/>";
+                            + GridView_plexRecords.Rows[i].Cells[13].Text + " <BR/>";
                     }
                     else
                     {
@@ -788,16 +796,21 @@ namespace PlexusDataHelper
                 int inContextPayLevel = dr.PayLvl - parentAmbN.PayLvl;
                 int inContextLevel = dr.Level - parentAmbN.Level;
 
-                if ((dr.Points != 0) && (dr.Level <= 7))
+                if (dr.PointsPv >= 100)
                 {
-                    //runningPoints = runningPoints + payPoints(getAccuratePayLevel(childAmbNum, ambNum));
                     runningPoints = runningPoints + payPoints(inContextPayLevel);
                 }
-                else if ((dr.Pv > 100) && (dr.Level > 7) && (dr.Pv != 199.00))
-                {
-                    //runningPoints = runningPoints + payPoints(getAccuratePayLevel(childAmbNum, ambNum));
-                    runningPoints = runningPoints + payPoints(inContextPayLevel);
-                }
+
+                //if ((dr.Points != 0) && (dr.Level <= 7))
+                //{
+                //    //runningPoints = runningPoints + payPoints(getAccuratePayLevel(childAmbNum, ambNum));
+                //    runningPoints = runningPoints + payPoints(inContextPayLevel);
+                //}
+                //else if ((dr.Pv > 100) && (dr.Level > 7) && (dr.Pv != 199.00))
+                //{
+                //    //runningPoints = runningPoints + payPoints(getAccuratePayLevel(childAmbNum, ambNum));
+                //    runningPoints = runningPoints + payPoints(inContextPayLevel);
+                //}
             }
             return runningPoints;
         }
@@ -893,7 +906,7 @@ namespace PlexusDataHelper
                 //#36dbca = Active
                 //#93db70 = New
 
-                if (IsTheSameMonth((DateTime.Parse(e.Row.Cells[4].Text))))
+                if (IsTheSameMonth((DateTime.Parse(e.Row.Cells[8].Text))))
                 {
                     foreach (TableCell cell in e.Row.Cells)
                     {
@@ -901,7 +914,7 @@ namespace PlexusDataHelper
                         cell.ForeColor = System.Drawing.Color.Black;
                     }
                 }
-                else if (e.Row.Cells[7].Text == "Y")
+                else if (e.Row.Cells[10].Text == "Y")
                 {
                     foreach (TableCell cell in e.Row.Cells)
                     {
@@ -931,6 +944,9 @@ namespace PlexusDataHelper
 		private string _phone;
         private string _email;
         private int _totalPoints;
+        private double _pointspv;
+        private double _welcomepv;
+		
 
 		public DAO_PLEXUS_DATARECORD()
 		{ }
@@ -949,6 +965,8 @@ namespace PlexusDataHelper
         public string Phone { get { return _phone; } set { _phone = value; } }
         public string Email { get { return _email; } set { _email = value; } }
         public int TotalPoints { get { return _totalPoints; } set { _totalPoints = value; } }
-	}
+        public double PointsPv { get { return _pointspv; } set { _pointspv = value; } }
+        public double WelcomePv { get { return _welcomepv; } set { _welcomepv = value; } }
+    }
 
 }
